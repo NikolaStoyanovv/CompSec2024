@@ -57,29 +57,6 @@ char* read_cypher(char* filename)
     return cipher;
 }
 
-char* read_key(char* filename)
-{
-    FILE* file;
-    file = fopen(filename, "r");
-    
-    if(file == NULL)
-    {
-        printf("Error reading from file.");
-        return NULL;
-    }
-    
-    char* key = (char*) malloc(MAXN * sizeof(char));
-    if(fgets(key, MAXN, file) == NULL)
-    {
-        printf("Error reading from file.");
-        
-        return NULL;
-    }
-    
-    
-    fclose(file);
-    return key;
-}
 
 int main()
 {
